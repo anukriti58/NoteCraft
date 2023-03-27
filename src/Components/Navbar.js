@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import './Navbar.css'
 
+
 export default function Navbar(props) {
   return (
   <nav className={`navbar navbar-${props.mode} bg-${props.mode} fixed-top`}>
@@ -21,7 +22,7 @@ export default function Navbar(props) {
       <span className="navbar-toggler-icon"></span>
     </button>
 
-    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div className={`offcanvas offcanvas-end text-bg-${props.mode}`} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Options</h5>
         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -33,7 +34,7 @@ export default function Navbar(props) {
             <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">About</a>
+            <a className="nav-link" href="/about">About</a>
           </li>
         </ul>
       </div>
